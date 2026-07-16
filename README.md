@@ -16,9 +16,11 @@ This repository contains a containerized data profiling and processing pipeline 
 Since the dataset is external, mount your local data folder when running the container.
 
 1. **Build the Docker Image:**
-   ```bash docker build -t referral-pipeline .
+   ```bash
+   docker build -t referral-pipeline .
    
-2. **Run the Pipeline (with Volume Mounting):**
+3. **Run the Pipeline (with Volume Mounting):**
+   
    docker run -v "/path/to/your/DE Dataset - intern:/app/data/DE Dataset - intern" -v "$(pwd)/output:/app/output" referral-pipeline
 
 ## Fraud Detection Approach
