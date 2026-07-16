@@ -18,3 +18,9 @@ Since the dataset is external, mount your local data folder when running the con
 1. **Build the Docker Image:**
    ```bash
    docker build -t referral-pipeline .
+   
+2. **Run the Pipeline (with Volume Mounting):**
+   docker run -v "/path/to/your/DE Dataset - intern:/app/data/DE Dataset - intern" -v "$(pwd)/output:/app/output" referral-pipeline
+
+## Fraud Detection Approach
+* IP Registration Velocity: Identifies multiple referral accounts registering under an identical IP address to flag potential multi-accounting manipulation.
